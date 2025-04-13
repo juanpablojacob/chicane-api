@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "chicane-api",
+  "type": "module",
+  "dependencies": {
+    "mongodb": "6.13.1"
+  },
+  "devDependencies": {
+    "prettier": "3.5.3"
+  }
+}

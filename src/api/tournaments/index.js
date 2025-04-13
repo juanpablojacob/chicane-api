@@ -1,0 +1,10 @@
+import { getUserTournaments } from '../../data/tournaments.js';
+
+export async function GET(request) {
+  const userId = new URL(request.url).searchParams.get('userId');
+  if (!userId) {
+    return Response.json({ error: 'Missing userId' }, { status: 400 });
+  }
+  const tournaments = await getUserTournaments(userId);
+  return Response.json(tournaments);
+}
