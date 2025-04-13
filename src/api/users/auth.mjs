@@ -1,5 +1,5 @@
-import { getUserByName } from '../../data/users.js';
-import { decryptValue } from '../../utils/crypto.js';
+import { getUserByName } from '../../data/users.mjs';
+import { decryptValue } from '../../utils/crypto.mjs';
 
 export async function POST(request) {
   const credentials = await request.json();

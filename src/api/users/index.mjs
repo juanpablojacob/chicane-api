@@ -1,4 +1,4 @@
-import { getUserByName, insertUser } from '../../data/users.js';
+import { getUserByName, insertUser } from '../../data/users.mjs';
 
 export async function POST(request) {
   const user = await request.json();

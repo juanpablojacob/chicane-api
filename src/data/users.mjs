@@ -1,6 +1,6 @@
-import db from './db.js';
-import { encryptValue } from '../utils/crypto.js';
-import { createId } from '../utils/id.js';
+import db from './db.mjs';
+import { encryptValue } from '../utils/crypto.mjs';
+import { createId } from '../utils/id.mjs';
 
 export async function getUserByName(name) {
   return await db.collection('users').findOne({ name });

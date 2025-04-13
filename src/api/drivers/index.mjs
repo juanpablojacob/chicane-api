@@ -1,4 +1,4 @@
-import { getDrivers, insertDrivers } from '../../data/drivers.js';
+import { getDrivers, insertDrivers } from '../../data/drivers.mjs';
 
 export async function GET(request) {
   const params = new URL(request.url).searchParams;

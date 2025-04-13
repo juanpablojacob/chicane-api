@@ -1,5 +1,5 @@
-import db from './db.js';
-import { createId } from '../utils/id.js';
+import db from './db.mjs';
+import { createId } from '../utils/id.mjs';
 
 export async function getDrivers(year) {
   return await db.collection('drivers').find({ year, active: true }).toArray();

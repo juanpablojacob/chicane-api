@@ -1,4 +1,4 @@
-import { getUserTournaments } from '../../data/tournaments.js';
+import { getUserTournaments } from '../../data/tournaments.mjs';
 
 export async function GET(request) {
   const userId = new URL(request.url).searchParams.get('userId');
