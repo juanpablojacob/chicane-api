@@ -2,7 +2,7 @@ import db from './db.mjs';
 import { createId } from '../utils/id.mjs';
 
 export async function getUserTournaments(userId) {
-  return await db.collection('tournaments').find({ users: userId }).toArray();
+  return await db.collection('tournaments').find({ members: userId }).toArray();
 }
 
 export async function createTournament(tournament) {
