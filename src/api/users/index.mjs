@@ -6,7 +6,6 @@ export async function POST(request) {
   if (userWithSameName) {
     return Response.json({ error: 'Username taken' }, { status: 409 });
   }
-  await insertUser(user);
-  const { password, ...fields } = user;
-  return Response.json(fields, { status: 201 });
+  const { insertedId } = await insertUser(user);
+  return Response.json({ _id: insertedId }, { status: 201 });
 }

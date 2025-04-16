@@ -13,5 +13,5 @@ export async function POST(request) {
   if (credentials.password !== decryptValue(user.password)) {
     return Response.json({ error: 'Incorrect password' }, { status: 401 });
   }
-  return Response.json({ _id: user._id, name: user.name });
+  return Response.json({ _id: user._id });
 }
