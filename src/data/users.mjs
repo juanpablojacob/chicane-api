@@ -7,7 +7,7 @@ export async function getUserByName(name) {
 }
 
 export async function insertUser(user) {
-  return await db.collection('drivers').insertOne({
+  return await db.collection('users').insertOne({
     ...user,
     _id: createId(),
     password: encryptValue(user.password),
