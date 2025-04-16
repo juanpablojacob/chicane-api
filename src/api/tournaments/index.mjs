@@ -1,4 +1,7 @@
-import { getUserTournaments } from '../../data/tournaments.mjs';
+import {
+  getUserTournaments,
+  createTournament,
+} from '../../data/tournaments.mjs';
 
 export async function GET(request) {
   const userId = new URL(request.url).searchParams.get('userId');
@@ -7,4 +10,10 @@ export async function GET(request) {
   }
   const tournaments = await getUserTournaments(userId);
   return Response.json(tournaments);
+}
+
+export async function POST(request) {
+  const tournament = await request.json();
+  const { insertedId } = await createTournament(tournament);
+  return Response.json({ _id: insertedId }, { status: 201 });
 }
